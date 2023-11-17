@@ -72,7 +72,9 @@ export default class extends React.Component {
       const response = await uploadAvatar(data);
 
       const path = get(response, 'dimensions.square50.filedir');
-      const avatar = `${process.env.APP_API_URL}/${path.substring(1)}`;
+      const avatar = `${process.env.REACT_APP_APP_API_URL}/${path.substring(
+        1
+      )}`;
 
       this.setState({isSubmitting: false, avatar});
     } catch (err) {

@@ -37,7 +37,7 @@ dotenvFiles.forEach(dotenvFile => {
 
 // We support resolving modules according to `NODE_PATH`.
 const appDirectory = fs.realpathSync(process.cwd());
-process.env.NODE_PATH = (process.env.NODE_PATH || '')
+process.env.REACT_APP_NODE_PATH = (process.env.REACT_APP_NODE_PATH || '')
   .split(path.delimiter)
   .filter(folder => folder && !path.isAbsolute(folder))
   .map(folder => path.resolve(appDirectory, folder))
